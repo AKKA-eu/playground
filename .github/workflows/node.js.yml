@@ -31,5 +31,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+      working-directory: sample-app
     - run: npm run build --if-present
+      working-directory: sample-app
     - run: npm test
+      working-directory: sample-app
